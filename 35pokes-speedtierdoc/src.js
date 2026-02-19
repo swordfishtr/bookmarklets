@@ -19,8 +19,9 @@ javascript:void async function(){try{
 	const tb = app.rooms.teambuilder;
 	const t = tb.curTeam;
 	const s = new DexSearch('pokemon',t.format).typedSearch;
-	const roster = prompt('Input a comma-separated list of Pokemon.').split(',').map(p=>t.dex.species.get(p));
-	if (!roster) throw new Error('Aborted');
+	const input = prompt('Input a comma-separated list of Pokemon.');
+	if (!input) throw new Error('Aborted');
+	const roster = input.split(',').map(p=>t.dex.species.get(p));
 	if (roster.some(p=>!p.exists)) throw new Error(`Unknown Pokemon: ${roster.filter(p=>!p.exists).join(', ')}`);
 	const vs = [];
 	const addv = async (p,n,iv,ev,mod) => vs.push([
@@ -60,7 +61,7 @@ javascript:void async function(){try{
 		if (i>0) msg += `\nPress OK for the next table.`;
 		const c = vs.filter(v=>v[0]>=i&&(i===600||v[0]<i+100));
 		if (!c.length) continue;
-		await sleep(500);
+		await sleep(2000);
 		await navigator.clipboard.write([new ClipboardItem({'text/html':table(c)})]);
 		alert(msg);
 	}
