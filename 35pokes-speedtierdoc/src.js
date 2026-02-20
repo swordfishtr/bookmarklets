@@ -53,8 +53,13 @@ javascript:void function () {
 			}
 			for (const p of roster) {
 				if (
-					['agility', 'autotomize', 'rockpolish', 'dragondance', 'rapidspin', 'scaleshot'].some((m) => s.canLearn(p.id, m)) ||
-					Object.values(p.abilities).map(toID).some((a) => ['unburden', 'swiftswim', 'chlorophyll', 'sandrush', 'slushrush'].includes(a))
+					[
+						'shellsmash', 'shiftgear', 'agility', 'autotomize', 'rockpolish',
+						'dragondance', 'quiverdance', 'rapidspin', 'scaleshot', 'aquastep', 'trailblaze',
+					].some((m) => s.canLearn(p.id, m)) ||
+					Object.values(p.abilities).map(toID).some((a) => [
+						'speedboost', 'unburden', 'quickfeet', 'swiftswim', 'chlorophyll', 'sandrush', 'slushrush',
+					].includes(a))
 				) {
 					addrow(p, 1.1, 31, 252, 2);
 					addrow(p, 0, 31, 252, 2);
