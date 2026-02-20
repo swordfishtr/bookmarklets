@@ -58,7 +58,7 @@ javascript:void function () {
 						'dragondance', 'quiverdance', 'rapidspin', 'scaleshot', 'aquastep', 'trailblaze',
 					].some((m) => s.canLearn(p.id, m)) ||
 					Object.values(p.abilities).map(toID).some((a) => [
-						'speedboost', 'unburden', 'quickfeet', 'swiftswim', 'chlorophyll', 'sandrush', 'slushrush',
+						'speedboost', 'unburden', 'swiftswim', 'chlorophyll', 'sandrush', 'slushrush',
 					].includes(a))
 				) {
 					addrow(p, 1.1, 31, 252, 2);
