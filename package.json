@@ -1,0 +1,27 @@
+{
+  "name": "bookmarklets",
+  "version": "1.0.0",
+  "description": "Personal use bookmarklets.",
+  "homepage": "https://github.com/swordfishtr/bookmarklets#readme",
+  "bugs": {
+    "url": "https://github.com/swordfishtr/bookmarklets/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swordfishtr/bookmarklets.git"
+  },
+  "license": "GPL-3.0",
+  "author": "demi",
+  "type": "commonjs",
+  "main": "",
+  "scripts": {
+    "start": "eslint",
+    "lint": "eslint"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.9.0",
+    "eslint": "^10.0.0",
+    "globals": "^17.3.0"
+  }
+}
