@@ -6,6 +6,14 @@ Usage:
 
 Open https://play.pokemonshowdown.com/teambuilder and navigate to any team for the desired format. Run the bookmarklet. You should be prompted in Showdown's UI for a list of Pokemon. Provide it, and after clicking `Generate`, you'll have the first table written into your clipboard. Paste it into your doc, come back to Showdown and click `Copy Next Table`. Repeat until it says you're done.
 
+<img src="./1.png"></img>
+
+<img src="./2.png"></img>
+
+<img src="./3.png"></img>
+
+<img src="./4.png"></img>
+
 Notes:
 
 Currently this script does not work on the Preact client rewrite.
