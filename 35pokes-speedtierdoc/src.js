@@ -24,7 +24,7 @@ javascript:void function () {
 
 		const sprite = (p) => `<span style="border:none;display:inline-block;overflow:hidden;width:40px;height:30px;"><img alt=":Drampa:" src="https://www.smogon.com/forums/media/minisprites/${p.spriteid}.png" width="40" height="30" style="margin-left:0px;margin-top:0px;" /></span>`;
 
-		if (!app?.rooms?.teambuilder?.curTeam) {
+		if (!globalThis.app?.rooms?.teambuilder?.curTeam) {
 			throw new Error('Please navigate to a team in Pokemon Showdown. Make sure the team is for the correct format!');
 		}
 		const { teambuilder } = app.rooms;
@@ -36,7 +36,7 @@ javascript:void function () {
 			sprite(p),
 			p.name,
 			p.baseStats.spe,
-			n === true ? 'Positive' : n === false ? 'Negative' : 'Neutral',
+			n > 1 ? 'Positive' : n < 1 ? 'Negative' : 'Neutral',
 			iv,
 			ev,
 			mod > 0 ? `+${mod}` : mod,
